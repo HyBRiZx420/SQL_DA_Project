@@ -155,46 +155,73 @@ ADD FOREIGN KEY (star_id)
 REFERENCES stars (star_id);
 
 
+ALTER TABLE planets
+DROP COLUMN index;
+
+ALTER TABLE terrestrial_planets
+DROP COLUMN index;
+
+ALTER TABLE super_earth_planets
+DROP COLUMN index;
+
+ALTER TABLE gas_giant_planets
+DROP COLUMN index;
+
+ALTER TABLE neptune_like_planets
+DROP COLUMN index;
+
+ALTER TABLE unknown_planets
+DROP COLUMN index;
+
+
+
+ALTER TABLE planets
+ADD FOREIGN KEY (planet_id)
+REFERENCES fullsize_nasa_dataset (planet_id);
+
+ALTER TABLE planets
+ADD FOREIGN KEY (star_id)
+REFERENCES stars (star_id);
+
+ALTER TABLE terrestrial_planets
+ADD FOREIGN KEY (planet_id)
+REFERENCES fullsize_nasa_dataset (planet_id);
+
+ALTER TABLE terrestrial_planets
+ADD FOREIGN KEY (star_id)
+REFERENCES stars (star_id);
+
+ALTER TABLE super_earth_planets
+ADD FOREIGN KEY (planet_id)
+REFERENCES fullsize_nasa_dataset (planet_id);
+
+ALTER TABLE super_earth_planets
+ADD FOREIGN KEY (star_id)
+REFERENCES stars (star_id);
+
+ALTER TABLE gas_giant_planets
+ADD FOREIGN KEY (planet_id)
+REFERENCES fullsize_nasa_dataset (planet_id);
+
+ALTER TABLE gas_giant_planets
+ADD FOREIGN KEY (star_id)
+REFERENCES stars (star_id);
+
+ALTER TABLE neptune_like_planets
+ADD FOREIGN KEY (planet_id)
+REFERENCES fullsize_nasa_dataset (planet_id);
+
+ALTER TABLE neptune_like_planets
+ADD FOREIGN KEY (star_id)
+REFERENCES stars (star_id);
+
+
+ALTER TABLE unknown_planets
+ADD FOREIGN KEY (planet_id)
+REFERENCES fullsize_nasa_dataset (planet_id);
+
+ALTER TABLE unknown_planets
+ADD FOREIGN KEY (star_id)
+REFERENCES stars (star_id);
+
 */
-
-ALTER TABLE planets
-DROP COLUMN index;
-
-ALTER TABLE "Terrestrial Planets"
-DROP COLUMN index;
-
-ALTER TABLE "Super Earth Planets"
-DROP COLUMN index;
-
-ALTER TABLE "Gas Giants"
-DROP COLUMN index;
-
-ALTER TABLE planets
-DROP COLUMN index;
-
-ALTER TABLE planets
-DROP COLUMN index;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
